@@ -15,7 +15,6 @@ func TestFindHourglass(t *testing.T) {
 0 0 0 -2 0 0
 0 0 -1 -2 -4 0
 `))
-	//result :=
 	if got, want := FindHourglass(b), 13; got != want {
 		t.Errorf("wrong answer: got=%v", got)
 	}
