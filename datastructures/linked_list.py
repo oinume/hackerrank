@@ -25,6 +25,19 @@ def Reverse(head):
     return values[0]
 
 
+def ReversePrint(head):
+    node = head
+    values = []
+    while node is not None:
+        values.append(node.data)
+        node = node.next
+        if node is None:
+            break
+    values.reverse()
+    for v in values:
+        print(v)
+
+
 def InsertNth(head, data, position):
     current = 0
     prev = None
