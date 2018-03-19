@@ -6,6 +6,24 @@ class Node(object):
         self.next = next_node
 
 
+def CompareLists(headA, headB):
+    if headA is None and headB is None:
+        return 1
+    if headA is None or headB is None:
+        return 0
+
+    nodeA = headA
+    nodeB = headB
+    while nodeA is not None and nodeB is not None:
+        if nodeA.data != nodeB.data:
+            return 0
+        nodeA = nodeA.next
+        nodeB = nodeB.next
+        if nodeA is None or nodeB is None:
+            return 0
+    return 1
+
+
 def Reverse(head):
     if head is None:
         return None
