@@ -6,6 +6,16 @@ class Node(object):
         self.next = next_node
 
 
+def GetNode(head, position):
+    node = head
+    nodes = []
+    while node is not None:
+        nodes.append(node)
+        node = node.next
+    pos = len(nodes) - 1 - position
+    return nodes[pos].data
+
+
 def CompareLists(headA, headB):
     if headA is None and headB is None:
         return 1
@@ -100,8 +110,6 @@ if __name__ == '__main__':
     a = Node('a', b)
     print_node(a)
     print("---")
-    # head = InsertNth(a, 'x', 0)
-    # print_node(head)
-    head = Reverse(a)
-    print_node(head)
+
+    print(GetNode(a, 1))
 
